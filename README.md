@@ -1,1 +1,0 @@
-# Sabyrzhan28.github.io
