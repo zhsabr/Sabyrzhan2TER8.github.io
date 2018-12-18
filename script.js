@@ -40,7 +40,104 @@ function countdown(dateEnd) {
 
   function display(days, hours, minutes, seconds) {}
 }
-countdown('12/19/2018 03:14:07 AM');
+countdown('01/01/2019 00:00:00 AM');
+
+$(document).ready(function(){
+  var $srcValue = $('#imgHolder img').attr('src');
+  var $elkaImg = $('#imgHolder img');
+
+      $('#colorsSelector .colorItem').on('click',function(){
+        
+        var imgPath;
+       
+        imgPath = $(this).attr('data-img-path');
+            
+            $elkaImg.attr('src', imgPath);
+
+      });
+      /*КАЛЬКУЛЯТОР*/
+
+          var modelSpecs,
+              modelPrice,
+              modelSpecsHolder,
+              modelPriceHolder;
+
+          modelSpecsHolder = $('#modelSpecs');
+          modelPriceHolder = $('#modelPrice');
+
+          modelPrice = 0;
+          modelSpecs = '';
+
+          function calculatePrice(){
+
+            var modelPriceElka = $('input[name=engine]:checked','#elkaForm').val();
+            var modelPriceTra = $('input[name=transmission]:checked','#elkaForm').val();
+            var modelPricePackage = $('input[name=package]:checked','#elkaForm').val();
+              
+              modelPriceElka = parseInt(modelPriceElka);
+              modelPriceTra = parseInt(modelPriceTra);
+              modelPricePackage = parseInt(modelPricePackage);
+
+            modelPrice = modelPriceElka + modelPriceTra + modelPricePackage;
+
+             modelPriceHolder.text(addSpace(modelPrice) + ' тенге');
+          }; 
 
 
-new WOW().init();
+
+          function compileSpecs(){
+              modelSpecs = $('input[name=engine]:checked + label','#elkaForm').text();
+              modelSpecs = modelSpecs +', '+ $('input[name=transmission]:checked + label','#elkaForm').text();
+              modelSpecs = modelSpecs +', '+ $('input[name=package]:checked + label','#elkaForm').text();
+               modelSpecsHolder.text(modelSpecs);
+          }
+
+
+          $('#elkaForm input').on('change',function(){
+            calculatePrice();
+            compileSpecs();
+          })
+
+          calculatePrice();
+          compileSpecs();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          function addSpace(nStr){
+            
+            nStr += '';
+            
+            x = nStr.split('.');
+            
+            x1 = x[0];
+            
+            x2 = x.length >1 ? '.' + x[1] : '';
+            
+            var rgx = /(\d+)(\d{3})/;
+
+            while(rgx.test(x1)){
+
+              x1 = x1.replace(rgx, '$1' + ' ' + '$2');
+            }
+
+            return x1 + x2;
+          }
+
+});
