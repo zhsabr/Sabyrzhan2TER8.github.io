@@ -11,6 +11,10 @@ font-family: 'Montserrat', sans-serif;
    font-weight: 400;
 }
 
+.centertext{
+  text-align: center;
+}
+
 .fontw700{
   font-weight: 700;
 }
@@ -67,7 +71,7 @@ font-family: 'Montserrat', sans-serif;
   display: block;
 }
 
-/* Стили формы */
+
 #application {
     width: 475px;
     margin: 0 auto;
@@ -78,8 +82,8 @@ font-family: 'Montserrat', sans-serif;
  .main-banner{
   display: flex;
  }
-/*Стили полей для ввода*/
-#applicationName, #applicationEmail, #applicationTelephone {
+
+ #applicationName,#applicationKol, #applicationTelephone {
     width: 85%;
     height: 60px;
     background: none;
@@ -92,16 +96,16 @@ font-family: 'Montserrat', sans-serif;
     font-family: 'Montserrat', sans-serif;
 }
 
-/*Стили полей при клике по ним*/
+#applicationKol{
+  width: 50%;
+}
+
+
 #applicationName:focus, #applicationEmail:focus, #applicationTelephone:focus {
     border: 1px solid #30ad64;
     font-family: 'Montserrat', sans-serif;
 }
  
-/*Стили текста, выводящегося в placeholder*/
-
-
-/*Стили для кнопки*/
 .applicationButton {
     margin-top: 25px;
     background: #30ad64;
@@ -116,13 +120,21 @@ font-family: 'Montserrat', sans-serif;
     font-family: 'Montserrat', sans-serif;
     outline: none;
 }
-    .applicationButton:hover {
+  .applicationButton:hover {
         background: #d68c18;
         transition: .6s;
         outline: none;
     }
 
- .privileger{
+.privilege{
+  padding-top: 80px;
+}
+
+.black{
+  color: red;
+}
+
+.privileger{
     justify-content: space-around;
   }
 
@@ -130,11 +142,155 @@ font-family: 'Montserrat', sans-serif;
     text-align: center;
   }
 
+.reviews{
+padding-top: 80px;
+}
+
+.h-carousel{
+  height: 400px;
+  background-color: rgba(31,31,31,.06);
+  line-height: 24px;
+}
+
+.text-rew{
+  width: 50%;
+  margin: 0 auto;
+}
+
+
+/* .hc1{
+background-image: url(img/clients/cl1.png);
+background-size: 250px 250px;
+background-repeat: no-repeat;
+background-position: right;
+border-radius: 
+}
+
+.hc2{
+background-image: url(img/clients/cl3.png);
+background-repeat: no-repeat;
+background-position: right;
+background-size: 250px 250px;
+}
+
+.hc3{
+background-image: url(img/clients/cl2.png);
+background-repeat: no-repeat;
+background-position: right;
+background-size: 250px 250px;
+} */
+
+.h-carousel h2{
+  padding-top: 80px;
+}
+
+
+/* ORDER DETAILS */
+
+.payment-order{
+  height: 500px;
+}
+
+.text-order{
+
+  padding-top: 35px;
+  border-left: 1px solid rgb(216, 216, 216);
+}
+
+.text-order h2{
+  font-size: 20px;
+  margin:0 auto;
+  text-align: center;
+}
+
+.forma2{
+  text-align: center;
+  margin:0 auto;
+  width: 85%;
+}
+
+.detail-order{
+  width: 450px;
+}
 
 
 
+.characteristic{
+  padding-top: 80px;
+}
 
 
+.photogalery{
+  padding-top: 80px;
+}
+
+.colorsSelector{
+  padding-top: 30px;
+  justify-content: space-around;
+}
+
+.imageElka{
+  height: 600px;
+}
+
+.imgHolder{
+  text-align: center;
+  margin:0 auto;
+}
+
+.main-elka{
+  box-shadow: 0 0 1px rgba(0,0,0,0.5);
+}
+
+.colorItem{
+  height: 30px;
+  cursor: pointer;
+  width: 80px;
+  text-align: center;
+  border-radius: 50%;
+  border:2px solid black;
+}
+
+.model-summary{
+  font-size: 16px;
+  text-align: center;
+  width: 100%;
+  padding-top: 80px;
+}
+
+.buttondiv{
+  margin: 0 auto;
+  width: 20%;
+  text-align: center;
+  height: 30px;
+  border-radius: 30%;
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+.rowelka{
+  padding-top: 25px;
+  justify-content: space-around;
+}
+
+.elkaForm{
+  padding-top: 40px;
+  padding-bottom: 70px;
+}
+
+.model-price{
+  font-size: 25px;
+  color: green;
+}
+
+.elkaButton{
+  width: 50%;
+;
+}
+
+.forma-elki{
+  width: 100%;
+}
 
 @media (max-width: 992px) {
 .slidertext{
@@ -169,7 +325,7 @@ font-family: 'Montserrat', sans-serif;
     font-size: 18px; 
 }
 
-  #applicationName, #applicationEmail, #applicationTelephone {
+  #applicationName, #applicationKol, #applicationTelephone {
     width: 100%;
     height: 35px;
     background: none;
@@ -213,7 +369,7 @@ font-family: 'Montserrat', sans-serif;
     width: 85%;
 }
 
-  #applicationName, #applicationEmail, #applicationTelephone {
+  #applicationName, #applicationkol, #applicationTelephone {
     width: 85%;
     height: 30px;
     background: none;
@@ -225,6 +381,10 @@ font-family: 'Montserrat', sans-serif;
   ..timer {
   font-size: 25px;}
 
+  h1{
+  font-size: 30px;
+  }
+
 h2{
   font-size: 22px;
 }
@@ -235,7 +395,7 @@ p{
 
 
 h3{
-    font-size: 25px;
+    font-size: 18px;
   }
 
 h4{
