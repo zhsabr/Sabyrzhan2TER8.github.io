@@ -245,10 +245,8 @@ background-size: 250px 250px;
 .colorItem{
   height: 30px;
   cursor: pointer;
-  width: 80px;
+  width: 100px;
   text-align: center;
-  border-radius: 50%;
-  border:2px solid black;
 }
 
 .model-summary{
@@ -267,6 +265,8 @@ background-size: 250px 250px;
   border: 1px solid black;
   cursor: pointer;
 }
+
+
 
 .rowelka{
   padding-top: 25px;
